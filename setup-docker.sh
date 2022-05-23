@@ -76,8 +76,13 @@ function main(){
         echo "Unsupported distro. Please install Docker manually"
         exit
     fi
+    apt install docker-compose
+    sleep 1
     docker --version
     echo "Docker installed"
+    sleep 1
+    docker-compose -v 
+    echo "Docker compose installed"
     sleep 1
     echo "Thank you for using this script to install Docker"
     echo "Made by Nick de Jager"
