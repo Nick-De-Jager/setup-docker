@@ -55,6 +55,11 @@ function setupDockerSLES() {
     systemctl start docker
 }
 
+function setupDockerCompose() {
+    curl -SL https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+}
+
 function main(){
     if [ "$EUID" -ne 0 ]; then
         echo "Please run as root or sudo"
@@ -76,12 +81,13 @@ function main(){
         echo "Unsupported distro. Please install Docker manually"
         exit
     fi
-    apt install docker-compose
+    sleep 1
+    setupDockerCompose
     sleep 1
     docker --version
     echo "Docker installed"
     sleep 1
-    docker-compose -v 
+    docker-compose -version
     echo "Docker compose installed"
     sleep 1
     echo "Thank you for using this script to install Docker"
