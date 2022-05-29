@@ -87,7 +87,7 @@ function main(){
     docker --version
     echo "Docker installed"
     sleep 1
-    docker-compose -version
+    docker-compose -v
     echo "Docker compose installed"
     sleep 1
     echo "Thank you for using this script to install Docker"
