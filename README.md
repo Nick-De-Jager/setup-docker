@@ -12,7 +12,7 @@ I like to have an easy way to install docker
 
 Everyone should have access to a simpel setup script instead of needing to find the right commands to install docker.
 
-#### Why should I this script if I can doing it myself?
+#### Why should I use this script if I can do it myself?
 
 Everyone has there own choice, I like to use a setup script for programmes I setup regular and others want to run every command by them self.
 ## Installation
